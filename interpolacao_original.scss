@@ -1,0 +1,113 @@
+$name: destaque;
+$bord: border;
+$base-size: 20px;
+$line-height: 22px;
+
+//aula 4 interpolacal
+
+p.#{$name} {
+#{$bord}-color: blue;
+}
+
+p {
+  font-size: #{$base-size} /
+  #{$line-height};
+}
+
+
+//aula 6 operacoes com strings
+
+//com interpolacao
+p:before {
+  content: "Eu tenho #{2 + 10} reais.";
+}
+
+$value: null;
+p:before {
+  content: "Eu tenho #{$value} reais.";
+}
+
+//aula 11 - interacoes
+
+//para faca
+
+@for $i from 1 through 3 {//com o through ele vai até o otro numero, ou seja i<=3
+  .item-#{$i} { width: 2em * $i; }
+}
+
+@for $i from 1 to 3 {//com o to ele vai até o numero menor que o ultimo numero, ou seja i<3
+  .item-#{$i} { width: 2em * $i; }
+}
+
+//repita
+
+@each $animal in dog, cat, fish, bird {//ou ainda criar um variavel lista com os nomes dos animais. ex: $animals: dog, cat, fish, bird;
+  .#{$animal}-icon{
+    background-image: url("images/#{$animal}.png");
+  }
+}
+
+//enquanto
+
+$i: 6;
+
+@while $i > 0 {
+  .item-#{$i} { width: 2em * $i}
+  $i: $i - 2;
+}
+
+
+
+//aula 12 mediaqueries
+
+.sidebar {
+  width: 30%;
+  @media screen and (orientation: landscape){
+    width: 40%;
+  }
+}
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin landscape {
+  @media screen and (orientation: landscape){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}){
+    @content;
+  }
+}
+
+header {
+  padding: 3em;
+  @include tablet {
+    padding: 2em;
+  }
+}
+
+//exercicios
+
+header {
+  @include tablet{
+    flex-flow: row;
+    .avatar {
+      margin: 0 40px;
+    }
+    .dest {
+      text-align: left;
+    }
+  }
+  .photos li{
+    width: 30%;
+  }
+}

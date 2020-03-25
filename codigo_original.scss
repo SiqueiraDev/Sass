@@ -1,0 +1,638 @@
+/*p
+
+aula 1 - introdução
+
+body{
+  background: #000;
+}
+
+a {
+  color: red;
+}
+
+ {
+  margin: 20px;
+}
+
+aula 2 - seletores
+
+ nav {
+   width: 100%;
+   background: #000;
+   ul {
+     list-style: none;
+   }
+   li {
+     color: #fff;
+     display: inline-block;
+     font: {
+       family: Arial;
+       size: 14pt;
+       weight: bold;
+     }
+   }
+   a {
+     color: red;
+     &:hover{
+       color: blue;
+     }
+   }
+ }
+
+*/
+
+//exercicios aula - 2
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  body {
+    background: #fafafa;
+    header {
+      display: flex;
+      margin: 30px 0;
+      flex-flow: column;
+      .avatar {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      .dest {
+        text-align: center;
+      }
+      h1, h2 {
+        display: inline-block;
+        margin: 10px 0;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      .links {
+        list-style: none;
+        margin: 10px 0;
+        li {
+          list-style: none;
+          margin: 10px 0;
+        }
+      }
+
+    }
+    main {
+      width: 90%;
+      max-width: 935px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.btn-follow {
+  margin: 0 20px;
+  padding: 6px 14px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3897f0;
+  color: #3897f0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  &:hover {
+    background: #3897f0;
+    color: #fff;
+  }
+}
+
+.photos {
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+  li{
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .img-hover {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0, 0.3);
+      transition: all 0.3s linear;
+    }
+    &:hover .img-hover{
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-flow: row;
+    .avatar {
+      margin: 0 40px;
+    }
+    .dest {
+      text-align: left;
+    }
+  }
+  .photos li{
+    width: 30%;
+  }
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  border: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+*/
+
+//aula 3 - variaveis
+
+/*$width: 100%;
+$font-size: 1.2rem;
+$background: #606060;
+$color: #fff;
+$border-style: solid 1px $color;
+
+$width-rem: 3.5rem;
+$width-px: 300px;
+$width: 300;
+
+$font: "Lucida Grande";
+$weight: bold;
+
+$bg: red;
+$bg-section: rgba(0, 0, 0, 0.7); //serve pro rgb também e geralmente ele compila pra hexadecimal
+$font-color: #ffffff;
+
+//variaveis lista
+
+$animais: leao, macaco, cobra, rato;//pode ser com virgula
+$animais: leao macaco cobra rato;//sem virgula
+$animais: "leao", "macaco", "cobra", "rato";//e com virgula e aspas
+
+$margin:  10px 20px 15px;//ou numeral
+$padding: 10px auto;
+
+//variaveis maps
+
+$social: (
+  facebook: #3b5998,
+  instagram: #517fa4,
+  github: #4183c4,
+  linkedin: #007bb6,
+  twitter: #00aced,
+);
+*/
+/*
+aula 3 - variaveis
+
+body {
+  background: $bg;
+  color: $font-color;
+}
+
+nav{
+  background: $background;
+  color: $color;
+  width: $width;
+  font-size: $font-size;
+}
+
+aside {
+  width: $width-px;
+}
+
+section {
+  font-family: $font;
+  font-weight: $weight;
+  background: $bg-section;
+  margin: $margin;
+}
+*/
+
+//exercicios aula - 3
+
+//substituindo os valores por variaveis
+
+/** {
+  margin: $margin;
+  padding: $padding;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+  body {
+    background: $bg;
+    header {
+      display: flex;
+      margin: $margin;
+      flex-flow: column;
+      .avatar {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      .dest {
+        text-align: center;
+      }
+      h1, h2 {
+        display: inline-block;
+        margin: $margin;
+      }
+      h1 {
+        font-size: $font-size;
+      }
+      h2 {
+        font-size: $font-size;
+      }
+      .links {
+        list-style: none;
+        margin: $margin;
+        li {
+          list-style: none;
+          margin: $margin;
+        }
+      }
+
+    }
+    main {
+      width: $width;
+      max-width: $width-px;
+      margin: $margin;
+    }
+  }
+}
+
+.btn-follow {
+  margin: $margin;
+  padding: $padding;
+  border-width: 1px;
+  border-style: $border-style;
+  border-color: $color;
+  color: #3897f0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  &:hover {
+    background: #3897f0;
+    color: #fff;
+  }
+}
+
+.photos {
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+  li{
+    width: $width-rem;
+    margin: $margin;
+    position: relative;
+    img {
+      width: $width;
+    }
+    .img-hover {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $width-px;
+      height: 100%;
+      background: $background;
+      transition: all 0.3s linear;
+    }
+    &:hover .img-hover{
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-flow: row;
+    .avatar {
+      margin: $margin;
+    }
+    .dest {
+      text-align: left;
+    }
+  }
+  .photos li{
+    width: $width-rem;
+  }
+}
+
+ul {
+  padding: $margin;
+  margin: $padding;
+}
+
+img {
+  border: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+*/
+
+//aula 4 - interpolação OBS outro documento
+
+//aula 5 - extend;
+
+/*
+.msg {
+  border: 1px solid;
+  padding: 4px;
+  text-align: center;
+}
+
+.msg-error {
+  @extend .msg;
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+.msg-alert {
+  @extend .msg;
+  border-color: #ff8e00;
+  color: #ff8e00;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hoverlink {
+  @extend a:hover;
+}
+
+.error {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+
+.attention {
+  font-size: 3rem;
+  background-color: #ff0;
+}
+
+.seriousError {
+  @extend .error;
+  @extend .attention;
+  border-width: 3px;
+}
+
+//exercicios aula - 5
+
+//herança de propriedades
+
+.botao {
+  padding: 10px auto;
+  border-width: 20px;
+  border-style: hidden;
+  border-radius: 8px;
+}
+
+.btn-follow {
+  @extend .botao;
+}
+*/
+
+//aula 6 - operacoes
+
+/*
+h1 {
+  //font-size: 2rem + 22px; unidades incompativeis
+  font-size: 5px + 2;
+  //font-size: 5px * 2px; unidade invalidas
+}
+
+h2 {
+  font-size: 5px - 2;
+}
+
+$width: 1000px;
+
+
+$font-size: 27px;
+
+p {
+  font-size: $font-size % 2;
+  font: 10px/8px bold italic serif; //nao vai funcionar
+  width: $width/2; //vai funcionar - metade do valor esta numa variavel
+  width: round(1.5)/2;//vai funcionar - esta dentro de uma funcao
+  height: (500px/2);//vai funionar - esta entre parentesis
+  margin-left: 5px + 8px/2px;//vai funcionar - esta numa expressao aritmetica
+  font: (italic bold 10px/8px);//nao vai funcionar - nao esta entre parentesis
+
+}
+
+p {
+  //soma de cores
+  color: #010203 + #040506;
+  background-color: #010203 * 2;
+  border-color: rgba(255, 0, 0, 0.75) + rgba(0, 255, 0, 0.75);
+  //soma de strings
+  cursor: e + -resize;
+}
+
+//OBS mais operacoes com strings no outro documento
+
+*/
+
+//exercicios aula - 6
+
+//aula 7 - mixins
+
+/*
+
+@mixin border-radius($radius){
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   -ms-border-radius: $radius;
+   border-radius: $radius;
+}
+
+.box{
+  @include border-radius(10px);
+}
+
+@mixin titulo($size, $color: blue){
+  color: $color;
+  font-size: $size;
+}
+
+h1 {
+  @include titulo(14px);
+}
+
+h1 {
+  @include titulo(14px, green);
+}
+
+//explicitando os parametros
+
+h1 {
+  @include titulo($color: red, $size: 14px);
+}
+
+@mixin pad ($values...){
+  padding: $values;
+}
+
+p{
+  padding: (20px);
+}
+
+p{
+  padding: (10px 20px);
+}
+
+p{
+  padding: (10px 20px 40px);
+}
+
+p{
+  padding: (10px 20px 40px 20px);
+}
+
+*/
+
+/*
+//aula 8 - funcoes
+
+$red: 100;
+$green: 200;
+$blue: 100;
+$alpha: 0.8;
+$color: red;
+$amount: 80%;
+$font: Open Sans;
+$weight: "bold";
+$real_round: 2.2;
+$real: 2.5;
+
+body {
+  background: rgb($red, $green, $blue);
+}
+
+section {
+  background: rgba($red, $green, $blue, $alpha);
+}
+
+section div{
+  background: lighten($color, $amount);
+  background: darken($color, $amount);
+  font-family: quote($font);
+  font-weight: unquote($font);
+  padding: str-length($weight);
+  font-family: to-upper-case($weight);
+  font-family: to-lower-case($weight);
+  width: percentage(str-length($weight));
+  margin: round($real_round);
+  margin: ceil($real);
+  margin: floor($real);
+}
+
+//funcao
+
+@function calc-fluid($target, $container){
+  @return ($target/$container) * 100%;
+}
+
+div {
+  width: calc-fluid(400, 1000);
+}
+*/
+
+//exercicios aula 8
+
+/*
+@function transform($pixe){
+  @return ($pixe/16);
+}
+
+div {
+  width: transform(26)rem;
+}
+*/
+
+//aula 9 - placeholders
+
+//se difere do mixin porque sao valores fixos
+
+/*
+%center {
+  display: block;
+  margin: 0 auto;
+}
+
+div {
+  @extend %center;
+}
+*/
+
+//exercicios aula - 9
+
+/*
+%center {
+  padding: 10px auto;
+  border-width: 20px;
+  border-style: hidden;
+  border-radius: 8px;
+}
+
+.btn-follow {
+  @extend %center;
+}
+*/
+
+//aula 10 condicionais
+
+/*
+$template: dark;
+
+header {
+  @if $template == dark {
+    color: #fff;
+    background: #222;
+  } @else if $template == light {
+    color: #333;
+    background: #fff;
+  } @else if $template == sea {
+    color: #1a8acd;
+    background: #b1d3ff;
+  } @else {
+    color: #555;
+    background: #f0f0f0;
+  }
+}
+*/

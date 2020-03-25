@@ -1,0 +1,80 @@
+@import "partials/variables";
+@import "partials/media_queries";
+@import "partials/mixins";
+@import "partials/functions";
+
+//codigos dos mediaqueries
+
+header {
+  padding: 3em;
+  @include tablet {
+    padding: 2em;
+  }
+}
+
+header {
+  @include tablet{
+    flex-flow: row;
+    .avatar {
+      margin: 0 40px;
+    }
+    .dest {
+      text-align: left;
+    }
+  }
+  .photos li{
+    width: 30%;
+  }
+}
+
+//codigos dos mixins
+
+.box{
+  @include border-radius(10px);
+}
+
+h1 {
+  @include titulo(14px);
+}
+
+h1 {
+  @include titulo(14px, green);
+}
+
+h1 {
+  @include titulo($color: red, $size: 14px);
+}
+
+p{
+  padding: (20px);
+}
+
+p{
+  padding: (10px 20px);
+}
+
+p{
+  padding: (10px 20px 40px);
+}
+
+p{
+  padding: (10px 20px 40px 20px);
+}
+
+//codigos funtions
+
+body {
+  background: rgb($red, $green, $blue);
+}
+
+section {
+  background: rgba($red, $green, $blue, $alpha);
+}
+
+div {
+  width: calc-fluid(400, 1000);
+}
+
+div {
+  width: transform(26)rem;
+}

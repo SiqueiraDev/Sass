@@ -1,0 +1,21 @@
+section div{
+  background: lighten($color, $amount);
+  background: darken($color, $amount);
+  font-family: quote($font);
+  font-weight: unquote($font);
+  padding: str-length($weight);
+  font-family: to-upper-case($weight);
+  font-family: to-lower-case($weight);
+  width: percentage(str-length($weight));
+  margin: round($real_round);
+  margin: ceil($real);
+  margin: floor($real);
+}
+
+@function calc-fluid($target, $container){
+  @return ($target/$container) * 100%;
+}
+
+@function transform($pixe){
+  @return ($pixe/16);
+}
